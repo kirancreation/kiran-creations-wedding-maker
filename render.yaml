@@ -1,0 +1,7 @@
+services:
+- type: web
+name: kiran-creations-wedding-maker
+runtime: node
+plan: free
+buildCommand: npm install
+startCommand: npm start
