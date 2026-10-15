@@ -7,7 +7,11 @@ const path = require('path');
 const os = require('os');
 
 const app = express();
-const PORT = Number(process.env.PORT || 3000);
+const PORT = process.env.PORT || 10000;
+
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
 const upload = multer({ dest: os.tmpdir(), limits: { fileSize: 250 * 1024 * 1024 } });
 app.disable('x-powered-by');
 app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'Kiran Creations MP4 converter' }));
