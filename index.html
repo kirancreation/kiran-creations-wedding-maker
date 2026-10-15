@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiran Creations | Wedding Video Maker</title>
+<style>
+:root{--bg:#090d0c;--panel:#121a17;--gold:#d9b56d;--muted:#aab5ae;--line:#29362f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f7f3e9;font-family:Arial,"Noto Sans Bengali",sans-serif}
+header{padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#090d0cf2;z-index:3}
+.brand{font-size:22px;font-weight:800;color:var(--gold)}nav a{color:#eee;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{padding:50px 5% 38px;text-align:center;background:radial-gradient(ellipse at top,#214637 0,#101b16 42%,#090d0c 78%)}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}.hero h1{font-size:clamp(30px,5vw,58px);margin:14px 0}.hero p{color:#c6d0c9;max-width:680px;margin:0 auto 24px;line-height:1.8}
+button,.btn{border:0;border-radius:9px;background:var(--gold);color:#17130a;padding:12px 18px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+.secondary{background:#25362e;color:#fff;border:1px solid #3b5145}
+main{padding:28px 5% 60px;max-width:1250px;margin:auto}.section-title{margin:18px 0 8px;font-size:25px}.muted{color:var(--muted);line-height:1.6}
+.templates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0 38px}
+.template{background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:14px;cursor:pointer;text-align:left;color:white}
+.template.active{border:2px solid var(--gold);padding:11px}.thumb{height:210px;border-radius:9px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;border:1px solid #a88848}
+.thumb:before{content:"";position:absolute;inset:12px;border:1px solid #e8ce91;border-radius:48% 48% 8px 8px}
+.thumb .orn{position:absolute;top:15px;color:#f4d58e;font-size:22px}.thumb .sample{z-index:1;padding:20px;color:#fff5d7;text-shadow:0 2px 5px #000}.thumb h3{font-family:Georgia,serif;font-size:24px;margin:8px 0}.thumb small{letter-spacing:2px}
+.green{background:radial-gradient(ellipse,#28634c,#09251c 70%)}.red{background:radial-gradient(ellipse,#b42d37,#4b0916 72%)}.ivory{background:radial-gradient(ellipse,#b9a16e,#45341f 75%)}
+.workspace{display:grid;grid-template-columns:minmax(280px, .9fr) minmax(300px,1.1fr);gap:22px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:20px}.panel h3{margin-top:0;color:var(--gold)}
+label{display:block;font-size:13px;color:#d8e0da;margin:14px 0 6px}input,select,textarea{width:100%;padding:11px;border:1px solid #34453b;border-radius:8px;background:#0b110e;color:white;font:inherit}input[type=file]{padding:8px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.preview-wrap{display:flex;justify-content:center;background:#070a08;border-radius:12px;padding:16px}
+.preview{width:min(100%,330px);aspect-ratio:9/16;border:5px solid #c9a45c;border-radius:9px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 35px #000;background:radial-gradient(ellipse,#28634c,#09251c 70%);transition:background .2s}
+.preview:before{content:"";position:absolute;inset:12px;border:1px solid #f0d38d;border-radius:48% 48% 8px 8px}
+.preview-content{position:relative;z-index:1;padding:20px;width:100%;text-shadow:0 2px 6px #000}
+.preview .symbol{font-size:36px;color:#f5d48a}.preview .bismillah{font-family:Georgia,serif;font-size:16px;color:#f3dca4}.preview h2{font-family:Georgia,serif;font-size:31px;color:#fff1c6;overflow-wrap:anywhere;margin:24px 0 8px}.preview .amp{color:#e7c579;font-size:24px}.preview .date{font-size:15px;margin:16px 0;color:#fff4d2}.preview .venue{font-size:13px;color:#e9e1cd}.preview .foot{font-size:10px;letter-spacing:2px;color:#dfc58e;margin-top:24px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.notice{font-size:12px;color:#aab5ae;line-height:1.6;margin-top:12px}
+footer{text-align:center;border-top:1px solid var(--line);padding:25px;color:#aab5ae;font-size:13px}
+@media(max-width:800px){.templates{grid-template-columns:1fr 1fr}.workspace{grid-template-columns:1fr}nav a{margin-left:8px}.formgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.templates{grid-template-columns:1fr 1fr}.thumb{height:160px}.formgrid{grid-template-columns:1fr}header{padding:14px 4%}.brand{font-size:18px}nav a{font-size:12px}}
+</style></head>
+<body>
+<header><div class="brand">✦ KIRAN CREATIONS</div><nav><a href="#templates">Templates</a><a href="#editor">Create Video</a></nav></header>
+<section class="hero"><div class="eyebrow">YOUR STORY • YOUR INVITATION</div><h1>একটি সুন্দর আমন্ত্রণ, স্মরণীয় মুহূর্ত</h1><p>পছন্দের ডিজাইন বেছে নিন, বর-কনের নাম ও বিয়ের তথ্য লিখুন এবং সঙ্গে সঙ্গে নিজের Wedding Invitation-এর প্রিভিউ দেখুন।</p><a class="btn" href="#templates">টেমপ্লেট বেছে নিন ↓</a></section>
+<main>
+<h2 class="section-title" id="templates">১. আপনার ডিজাইন বেছে নিন</h2><p class="muted">প্রথম সংস্করণে ৩টি নমুনা ডিজাইন দেওয়া আছে। টেমপ্লেটে ক্লিক করলে এডিটরে সেই ডিজাইনটি আসবে।</p>
+<div class="templates">
+<button class="template active" data-style="green"><div class="thumb green"><div class="sample"><div class="orn">☾ ✦</div><small>THE WEDDING OF</small><h3>Ayesha & Rahim</h3><small>YOU ARE INVITED</small></div></div><strong>01 · Emerald Nikah</strong><div class="muted">সবুজ ও গোল্ডেন</div></button>
+<button class="template" data-style="red"><div class="thumb red"><div class="sample"><div class="orn">✿ ❋ ✿</div><small>SHUBHO BIBAH</small><h3>Ayesha & Rahim</h3><small>WITH LOVE</small></div></div><strong>02 · Royal Red</strong><div class="muted">লাল ও সোনালি</div></button>
+<button class="template" data-style="ivory"><div class="thumb ivory"><div class="sample"><div class="orn">❀ ✧ ❀</div><small>TOGETHER FOREVER</small><h3>Ayesha & Rahim</h3><small>WEDDING INVITATION</small></div></div><strong>03 · Classic Ivory</strong><div class="muted">আইভরি ও গোল্ডেন</div></button>
+</div>
+<h2 class="section-title" id="editor">২. নিজের Wedding Invitation তৈরি করুন</h2><p class="muted">ফর্মে তথ্য বদলালে পাশের প্রিভিউ সঙ্গে সঙ্গে আপডেট হবে।</p>
+<div class="workspace">
+<section class="panel"><h3>✎ আপনার তথ্য লিখুন</h3>
+<div class="formgrid"><div><label for="bride">কনের নাম</label><input id="bride" value="Ayesha" placeholder="কনের নাম"></div><div><label for="groom">বরের নাম</label><input id="groom" value="Rahim" placeholder="বরের নাম"></div></div>
+<label for="date">বিয়ের তারিখ ও সময়</label><input id="date" value="18 December 2026 · 7:00 PM" placeholder="তারিখ ও সময়">
+<label for="venue">বিয়ের স্থান / ভেন্যু</label><input id="venue" value="Kolkata" placeholder="ভেন্যুর নাম ও ঠিকানা">
+<label for="message">আমন্ত্রণ বার্তা</label><textarea id="message" rows="3">With the blessings of our families, please join us to celebrate our wedding.</textarea>
+<label for="photo">বর-কনের ছবি (ঐচ্ছিক)</label><input id="photo" type="file" accept="image/*">
+<label for="music">ব্যাকগ্রাউন্ড মিউজিক (ঐচ্ছিক, নিজের লাইসেন্সকৃত ফাইল)</label><input id="music" type="file" accept="audio/*">
+<div class="actions"><button id="saveBtn">প্রিভিউ PNG ডাউনলোড</button><button id="resetBtn" class="secondary">তথ্য রিসেট</button></div>
+<div class="notice">নোট: এই স্টার্টার ফাইলটি একটি কার্যকর ডিজাইন-প্রিভিউ। এটি এখনও MP4 রেন্ডারিং, লগইন, অনলাইন পেমেন্ট বা সার্ভারে অর্ডার সংরক্ষণ করে না। নিচের README-তে পরবর্তী ধাপ দেওয়া আছে।</div>
+</section>
+<section class="panel"><h3>▣ লাইভ প্রিভিউ · 9:16</h3><div class="preview-wrap"><div class="preview green" id="preview"><div class="preview-content"><div class="symbol" id="symbol">☾ ✦</div><div class="bismillah" id="topline">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><div style="font-size:11px;letter-spacing:2px;margin-top:18px" id="inviteLabel">THE WEDDING OF</div><h2><span id="pBride">Ayesha</span><div class="amp">&</div><span id="pGroom">Rahim</span></h2><div class="date" id="pDate">18 December 2026 · 7:00 PM</div><div class="venue" id="pVenue">Kolkata</div><p id="pMessage" style="font-size:12px;line-height:1.6;color:#f5e8c7">With the blessings of our families, please join us to celebrate our wedding.</p><div class="foot">YOU ARE CORDIALLY INVITED</div><img id="couplePhoto" alt="" style="display:none;width:70px;height:70px;object-fit:cover;border-radius:50%;border:2px solid #e9cb83;margin-top:12px"></div></div></div><div class="actions"><button id="previewBtn">প্রিভিউ আপডেট</button><button id="printBtn" class="secondary">প্রিন্ট / PDF</button></div><hr style="border-color:#29362f;margin:22px 0"><h3>🎬 অ্যানিমেটেড ভিডিও তৈরি (MP4)</h3><label for="duration">ভিডিওর দৈর্ঘ্য</label><select id="duration"><option value="10">১০ সেকেন্ড</option><option value="15" selected>১৫ সেকেন্ড</option><option value="20">২০ সেকেন্ড</option></select><div class="actions"><button id="makeVideoBtn">ভিডিও রেকর্ড শুরু</button><button id="stopVideoBtn" class="secondary" disabled>রেকর্ড বন্ধ ও ডাউনলোড</button></div><div id="videoStatus" class="notice">MP4 পেতে নিচের START_SERVER.bat দিয়ে সার্ভার চালু করে http://localhost:3000 খুলুন।</div><div class="notice">PNG ডাউনলোডের জন্য প্রিভিউটি SVG-ভিত্তিক ক্যানভাসে আঁকা হয়; আপনার ব্রাউজারের ফন্ট অনুযায়ী চেহারায় সামান্য পার্থক্য হতে পারে।</div></section>
+</div></main>
+<footer>© Kiran Creations · Wedding Invitation Video Maker · Video Prototype</footer>
+<script>
+const $=id=>document.getElementById(id);
+let currentStyle='green';
+const styles={green:{bg:'radial-gradient(ellipse,#28634c,#09251c 70%)',symbol:'☾ ✦',label:'THE WEDDING OF'},red:{bg:'radial-gradient(ellipse,#b42d37,#4b0916 72%)',symbol:'✿ ❋ ✿',label:'SHUBHO BIBAH'},ivory:{bg:'radial-gradient(ellipse,#b9a16e,#45341f 75%)',symbol:'❀ ✧ ❀',label:'TOGETHER FOREVER'}};
+document.querySelectorAll('.template').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.template').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentStyle=btn.dataset.style;update();}));
+function update(){ $('pBride').textContent=$('bride').value||'কনের নাম';$('pGroom').textContent=$('groom').value||'বরের নাম';$('pDate').textContent=$('date').value||'বিয়ের তারিখ';$('pVenue').textContent=$('venue').value||'বিয়ের স্থান';$('pMessage').textContent=$('message').value; $('preview').style.background=styles[currentStyle].bg;$('symbol').textContent=styles[currentStyle].symbol;$('inviteLabel').textContent=styles[currentStyle].label;}
+['bride','groom','date','venue','message'].forEach(id=>$(id).addEventListener('input',update));
+$('photo').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('couplePhoto').src=r.result;$('couplePhoto').style.display='inline-block'};r.readAsDataURL(f)});
+$('previewBtn').onclick=update;
+$('resetBtn').onclick=()=>{ $('bride').value='Ayesha';$('groom').value='Rahim';$('date').value='18 December 2026 · 7:00 PM';$('venue').value='Kolkata';$('message').value='With the blessings of our families, please join us to celebrate our wedding.';$('photo').value='';$('couplePhoto').style.display='none';currentStyle='green';document.querySelectorAll('.template').forEach(b=>b.classList.toggle('active',b.dataset.style==='green'));update();};
+$('printBtn').onclick=()=>window.print();
+$('saveBtn').onclick=async()=>{const p=$('preview');const style=styles[currentStyle];const bride=$('bride').value||'Bride',groom=$('groom').value||'Groom',date=$('date').value||'',venue=$('venue').value||'',msg=$('message').value||'';const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 450 800"><defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="${currentStyle==='red'?'#b42d37':currentStyle==='ivory'?'#b9a16e':'#28634c'}"/><stop offset="1" stop-color="${currentStyle==='red'?'#4b0916':currentStyle==='ivory'?'#45341f':'#09251c'}"/></linearGradient></defs><rect width="450" height="800" fill="url(#g)"/><rect x="18" y="18" width="414" height="764" rx="180" fill="none" stroke="#e9cb83" stroke-width="1.5"/><text x="225" y="100" fill="#f5d48a" font-size="36" text-anchor="middle">${esc(style.symbol)}</text><text x="225" y="155" fill="#f3dca4" font-size="16" text-anchor="middle">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</text><text x="225" y="225" fill="#fff5d7" font-size="15" letter-spacing="3" text-anchor="middle">${esc(style.label)}</text><text x="225" y="300" fill="#fff1c6" font-family="Georgia,serif" font-size="32" text-anchor="middle">${esc(bride)}</text><text x="225" y="345" fill="#e7c579" font-size="28" text-anchor="middle">&amp;</text><text x="225" y="390" fill="#fff1c6" font-family="Georgia,serif" font-size="32" text-anchor="middle">${esc(groom)}</text><text x="225" y="455" fill="#fff4d2" font-size="17" text-anchor="middle">${esc(date)}</text><text x="225" y="490" fill="#e9e1cd" font-size="16" text-anchor="middle">${esc(venue)}</text><foreignObject x="45" y="530" width="360" height="110"><div xmlns="http://www.w3.org/1999/xhtml" style="color:#f5e8c7;text-align:center;font:16px Arial;line-height:1.5">${esc(msg)}</div></foreignObject><text x="225" y="710" fill="#dfc58e" font-size="11" letter-spacing="2" text-anchor="middle">YOU ARE CORDIALLY INVITED</text></svg>`;const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'});const url=URL.createObjectURL(blob);const img=new Image();img.onload=()=>{const c=document.createElement('canvas');c.width=900;c.height=1600;const ctx=c.getContext('2d');ctx.drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(url);c.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='Kiran-Creations-Wedding-Preview.png';a.click();URL.revokeObjectURL(a.href)},'image/png')};img.onerror=()=>{const a=document.createElement('a');a.href=url;a.download='Kiran-Creations-Wedding-Preview.svg';a.click()};img.src=url;};
+update();
+</script>
+<script>
+// Browser records a WebM stream; the local Node server converts it to MP4 with FFmpeg.
+let recorder=null, chunks=[], recordTimer=null, animationFrame=null, videoStream=null, audioCtx=null, musicSource=null;
+const videoCanvas=document.createElement('canvas'); videoCanvas.width=720; videoCanvas.height=1280;
+const vctx=videoCanvas.getContext('2d');
+function drawWeddingFrame(t){
+ const W=videoCanvas.width,H=videoCanvas.height;
+ const palettes={green:['#28634c','#09251c'],red:['#b42d37','#4b0916'],ivory:['#b9a16e','#45341f']};
+ const pal=palettes[currentStyle]||palettes.green;
+ const grad=vctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,pal[0]);grad.addColorStop(1,pal[1]);vctx.fillStyle=grad;vctx.fillRect(0,0,W,H);
+ // subtle moving glow and gold particles
+ const glow=vctx.createRadialGradient(W*(.25+.5*((Math.sin(t*.5)+1)/2)),H*.3,5,W*.5,H*.4,650);glow.addColorStop(0,'rgba(255,220,140,.19)');glow.addColorStop(1,'rgba(0,0,0,0)');vctx.fillStyle=glow;vctx.fillRect(0,0,W,H);
+ vctx.save();vctx.strokeStyle='#e9cb83';vctx.lineWidth=3;vctx.beginPath();vctx.roundRect(30,30,W-60,H-60,210);vctx.stroke();vctx.lineWidth=1;vctx.beginPath();vctx.roundRect(48,48,W-96,H-96,195);vctx.stroke();vctx.restore();
+ for(let i=0;i<45;i++){let x=(i*173+Math.sin(t*1.2+i)*45)%W;let y=(i*271-t*35)%(H+30);if(y<0)y+=H;vctx.fillStyle=`rgba(255,220,140,${.25+.55*((Math.sin(t*2+i)+1)/2)})`;vctx.beginPath();vctx.arc(x,y,1.5+(i%3),0,Math.PI*2);vctx.fill();}
+ vctx.textAlign='center';vctx.shadowColor='#000';vctx.shadowBlur=12;
+ vctx.fillStyle='#f5d48a';vctx.font='64px Georgia';vctx.fillText(styles[currentStyle].symbol,W/2,155);
+ vctx.fillStyle='#f3dca4';vctx.font='24px Georgia';vctx.fillText(currentStyle==='red'?'SHUBHO BIBAH':currentStyle==='ivory'?'TOGETHER FOREVER':'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',W/2,220);
+ vctx.fillStyle='#fff5d7';vctx.font='24px Arial';vctx.fillText(styles[currentStyle].label,W/2,310);
+ const bride=$('bride').value||'Bride',groom=$('groom').value||'Groom';
+ vctx.fillStyle='#fff1c6';vctx.font='bold 54px Georgia';vctx.fillText(bride.slice(0,24),W/2,425);
+ vctx.fillStyle='#e7c579';vctx.font='42px Georgia';vctx.fillText('&',W/2,490);
+ vctx.fillStyle='#fff1c6';vctx.font='bold 54px Georgia';vctx.fillText(groom.slice(0,24),W/2,555);
+ // user photo if uploaded
+ const pic=$('couplePhoto'); if(pic && pic.complete && pic.naturalWidth && pic.style.display!=='none'){try{vctx.save();vctx.beginPath();vctx.arc(W/2,660,78,0,Math.PI*2);vctx.clip();vctx.drawImage(pic,W/2-78,582,156,156);vctx.restore();vctx.strokeStyle='#e9cb83';vctx.lineWidth=5;vctx.beginPath();vctx.arc(W/2,660,80,0,Math.PI*2);vctx.stroke();}catch(e){}}
+ vctx.fillStyle='#fff4d2';vctx.font='26px Arial';vctx.fillText(($('date').value||'Wedding Date').slice(0,34),W/2,810);
+ vctx.fillStyle='#e9e1cd';vctx.font='25px Arial';vctx.fillText(($('venue').value||'Wedding Venue').slice(0,38),W/2,860);
+ const msg=($('message').value||'').slice(0,120);vctx.fillStyle='#f5e8c7';vctx.font='22px Arial';wrapCanvasText(vctx,msg,W/2,930,560,34,3);
+ vctx.fillStyle='#dfc58e';vctx.font='18px Arial';vctx.fillText('YOU ARE CORDIALLY INVITED',W/2,1135);
+ vctx.shadowBlur=0;vctx.fillStyle='rgba(255,255,255,.55)';vctx.font='15px Arial';vctx.fillText('KIRAN CREATIONS',W/2,1190);
+}
+function downloadWebM(blob){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Kiran-Creations-Wedding-Invitation.webm';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines){const words=text.split(/\s+/);let line='',lines=[];for(const word of words){const test=line?line+' '+word:word;if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=word;}else line=test;}if(line)lines.push(line);lines.slice(0,maxLines).forEach((l,i)=>ctx.fillText(l,x,y+i*lineHeight));}
+function videoLoop(start){const tick=()=>{const t=(performance.now()-start)/1000;drawWeddingFrame(t);if(recorder&&recorder.state==='recording')animationFrame=requestAnimationFrame(tick);};tick();}
+$('makeVideoBtn').addEventListener('click',async()=>{
+ if(!window.MediaRecorder||!videoCanvas.captureStream){$('videoStatus').textContent='আপনার ব্রাউজার ভিডিও রেকর্ডিং সমর্থন করছে না। Google Chrome-এর নতুন সংস্করণ ব্যবহার করুন।';return;}
+ $('makeVideoBtn').disabled=true;$('stopVideoBtn').disabled=false;$('videoStatus').textContent='ভিডিও রেকর্ড হচ্ছে… শেষ হলে “রেকর্ড বন্ধ ও ডাউনলোড” চাপুন।';chunks=[];drawWeddingFrame(0);videoStream=videoCanvas.captureStream(30);
+ // Attach uploaded music if the browser supports capturing the local audio stream.
+ const musicFile=$('music').files[0];let audioEl=null;let tracks=[...videoStream.getVideoTracks()];
+ if(musicFile){try{audioEl=new Audio(URL.createObjectURL(musicFile));audioEl.loop=true;audioEl.volume=0.8;await audioEl.play();if(audioEl.captureStream){const as=audioEl.captureStream();as.getAudioTracks().forEach(tr=>tracks.push(tr));}}catch(err){$('videoStatus').textContent='ভিডিও হচ্ছে; ব্রাউজার মিউজিক রেকর্ড করতে দেয়নি, তাই মিউজিক ছাড়া ভিডিও হতে পারে।';}}
+ const combined=new MediaStream(tracks);let mime='video/webm;codecs=vp9,opus';if(!MediaRecorder.isTypeSupported(mime))mime='video/webm;codecs=vp8,opus';if(!MediaRecorder.isTypeSupported(mime))mime='video/webm';
+ try{recorder=new MediaRecorder(combined,{mimeType:mime,videoBitsPerSecond:5000000});}catch(e){recorder=new MediaRecorder(combined);}
+ recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};
+ recorder.onstop=async()=>{cancelAnimationFrame(animationFrame);const blob=new Blob(chunks,{type:recorder.mimeType||'video/webm'});if(audioEl){audioEl.pause();URL.revokeObjectURL(audioEl.src);}if(videoStream)videoStream.getTracks().forEach(t=>t.stop());$('makeVideoBtn').disabled=false;$('stopVideoBtn').disabled=true;
+ // If opened from the local server, convert the recorded WebM to MP4. If opened as a file, fall back to WebM.
+ if(location.protocol==='http:'||location.protocol==='https:'){
+  try{$('videoStatus').textContent='ভিডিও তৈরি হয়েছে। এখন MP4-তে কনভার্ট হচ্ছে…';const fd=new FormData();fd.append('video',blob,'wedding-invitation.webm');const response=await fetch('/api/convert',{method:'POST',body:fd});if(!response.ok){const msg=await response.text();throw new Error(msg||'MP4 conversion failed');}const mp4=await response.blob();const url=URL.createObjectURL(mp4);const a=document.createElement('a');a.href=url;a.download='Kiran-Creations-Wedding-Invitation.mp4';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);$('videoStatus').textContent='সফল! আপনার MP4 ভিডিও ডাউনলোড হয়েছে।';}
+  catch(err){downloadWebM(blob);$('videoStatus').textContent='MP4 কনভার্ট হয়নি। WebM ভিডিও ডাউনলোড করা হয়েছে। সার্ভার চালু আছে কি না দেখুন। ('+err.message+')';}
+ }else{downloadWebM(blob);$('videoStatus').textContent='আপনি index.html সরাসরি খুলেছেন, তাই WebM ডাউনলোড হয়েছে। MP4 পেতে START_SERVER.bat চালিয়ে http://localhost:3000 খুলুন।';}
+};
+ recorder.start(250);videoLoop(performance.now());recordTimer=setTimeout(()=>{if(recorder&&recorder.state==='recording')recorder.stop();},Number($('duration').value||15)*1000);
+});
+$('stopVideoBtn').addEventListener('click',()=>{if(recordTimer)clearTimeout(recordTimer);if(recorder&&recorder.state==='recording')recorder.stop();});
+</script>
+
+</body></html>
